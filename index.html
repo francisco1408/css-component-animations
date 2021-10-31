@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+    
     <div class = "scroll-container">
         <section>
             <div class="big-card">
@@ -44,23 +45,94 @@
                 <h3 class="big-card__fire-title">fire effect</h3>
                 <div class="component-container component-container__fire">
                     
-                        
-                        <div class="fire-component fire-background">
-                            <h4> What is fire?</h4>
-                            <div class="component_text">     
-                                The component should be semi-transparent and have some blur, both of which are true characteristics of glass. The CSS properties for this are <b>background-color with rgba</b> (the last parameter is transparency) and <b>backdrop-filter with blur function</b>.
+                         
+                        <div class="fire-component flame">
+                            (hover here)   
+                            <h4 class="fire-component__title">Shadows and SVG turbulence</h4>
+                            <div class="fire-component_text">     
+                                For this efect I made three filters with the SVG and deTurbulance HTML tags, and aplied it to the title. Then I added a bunch of shadows with colors ranging from blue, yellow to red, to represent the colors of the flame. A keyframe animation is applied to the title on hover of this card, so it switches between the three filters that are slighly different.
+                            </div> 
+                            
+
+                        </div>  
+                        <div class="fire-component fire-component__info">
+                            <h4 class="fire-component__title"> HTML:</h4>
+                            <div class="fire-component_text">  
+                                <xmp>
+<svg>
+<filter id="fire1">
+    <feTurbulence 
+    id ="turbulence" 
+    baseFrequency="0.1 0.1" 
+    numOctaves="5" 
+    seed="3">
+    </feTurbulence>
+    <feDisplacementMap 
+    in="SourceGraphic" 
+    scale="6"></feDisplacementMap>
+</filter>
+<filter id="fire2">
+    <feTurbulence id ="turbulence" 
+    baseFrequency="0.09 0.12" 
+    numOctaves="5" 
+    seed="3">
+    </feTurbulence>
+    <feDisplacementMap 
+    in="SourceGraphic" 
+    scale="6"></feDisplacementMap>
+</filter>
+<filter id="fire3">
+    <feTurbulence 
+    id ="turbulence" 
+    baseFrequency="0.12 0.25" 
+    numOctaves="5" 
+    seed="3">
+    </feTurbulence>
+    <feDisplacementMap 
+    in="SourceGraphic" 
+    scale="6"></feDisplacementMap>
+</filter>
+</svg>   
+                            </xmp>
                             </div> 
                         </div>  
-                        <div class="fire-component fire-background">
-                            <h4> What is fire?</h4>
-                            <div class="component_text">     
-                                The component should be semi-transparent and have some blur, both of which are true characteristics of glass. The CSS properties for this are <b>background-color with rgba</b> (the last parameter is transparency) and <b>backdrop-filter with blur function</b>.
-                            </div> 
-                        </div>  
-                        <div class="fire-component fire-background">
-                            <h4> What is fire?</h4>
-                            <div class="component_text">     
-                                The component should be semi-transparent and have some blur, both of which are true characteristics of glass. The CSS properties for this are <b>background-color with rgba</b> (the last parameter is transparency) and <b>backdrop-filter with blur function</b>.
+                        <div class=" fire-component fire-component__info">
+                            <h4 class="fire-component__title"> CSS:</h4>
+                            <div class="fire-component_text">  
+                                
+                                .flame:hover .fire-component__title{ <br>
+                                    border-radius: 10px;<br>
+                                    transform:scaleY(1.3);<br>
+                                    text-shadow: 0px -8px 8px #F00,<br>
+                                    0px -7px 5px #F00,<br>
+                                    0px -6px 10px #F00,<br>
+                                    0px -5px 10px #F00,<br>
+                                    0px -2px 12px rgb(255, 217, 0),<br>
+                                    0px -2px 15px rgb(255, 217, 0),<br>
+                                    0px 0px 15px rgb(255, 217, 0),<br>
+                                    0px 0px 20px yellow,<br>
+                                    0px 2px 10px #00F,
+                                    0px 2px 6px #00F;<br>
+                                    animation-name:fire;<br>
+                                    animation-iteration-count: infinite;<br>
+                                    animation-duration: 0.6s;<br>
+                                    filter: url(#fire1);<br>
+                                }<br>
+                                @keyframes fire{<br>
+                                    0%{<br>
+                                        filter: url(#fire1);<br>
+                                    }<br>
+                                    33%{<br>
+                                        filter: url(#fire2);<br>
+                                    }<br>
+                                    66%{<br>
+                                        filter: url(#fire3);<br>
+                                    }<br>
+                                    100%{<br>
+                                        filter: url(#fire1);<br>
+                                    }<br>
+                                }<br>
+
                             </div> 
                         </div>  
                 </div>
@@ -106,6 +178,23 @@
         </section>
 
     </div>
+    <svg>
+        <filter id="fire1">
+            <feTurbulence id ="turbulence" baseFrequency="0.1 0.1" numOctaves="5" seed="3">
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" scale="6"></feDisplacementMap>
+        </filter>
+        <filter id="fire2">
+            <feTurbulence id ="turbulence" baseFrequency="0.09 0.12" numOctaves="5" seed="3">
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" scale="6"></feDisplacementMap>
+        </filter>
+        <filter id="fire3">
+            <feTurbulence id ="turbulence" baseFrequency="0.12 0.25" numOctaves="5" seed="3">
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" scale="6"></feDisplacementMap>
+        </filter>
+    </svg>
     <script src="main.js"></script>
 </body>
 </html>

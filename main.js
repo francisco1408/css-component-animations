@@ -8,6 +8,7 @@ let setAnimations = (sectionBox)=>{
         if(sectionBox.id=="fire"){
             sectionBox.classList.remove("animated");
             sectionBox.classList.remove("animated_thunder");
+            sectionBox.classList.remove("animated_neon");
             if(isVisible(rect)){
                 sectionBox.classList.add("animated_fire");
             } else {
@@ -17,16 +18,28 @@ let setAnimations = (sectionBox)=>{
         } else if(sectionBox.id=="thunder"){
             sectionBox.classList.remove("animated");
             sectionBox.classList.remove("animated_fire");
+            sectionBox.classList.remove("animated_neon");
             if(isVisible(rect)){
                 sectionBox.classList.add("animated_thunder");
             } else {
                 sectionBox.classList.remove("animated_thunder");
                 
             }
-        }
+        } else if(sectionBox.id=="neon"){
+            sectionBox.classList.remove("animated");
+            sectionBox.classList.remove("animated_fire");
+            sectionBox.classList.remove("animated_thunder");
+            if(isVisible(rect)){
+                sectionBox.classList.add("animated_neon");
+            } else {
+                sectionBox.classList.remove("animated_neon");
+                
+            }
+    }
         else {
             sectionBox.classList.remove("animated_fire");
             sectionBox.classList.remove("animated_thunder");
+            sectionBox.classList.remove("animated_neon");
             if(isVisible(rect)){
                 sectionBox.classList.add("animated");
             } else {

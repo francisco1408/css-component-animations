@@ -1,16 +1,8 @@
 let wave_container = document.querySelector(".wave_container");
-
 let handleWave = (event)=> {
-    
     let waves = document.querySelectorAll(".wavywave");
     if(waves.length < 6){
-        console.log("------");
         let cord = document.querySelector(".wave_container").getBoundingClientRect();
-        console.log(cord.top);
-        console.log(cord.left);
-        console.log("--");
-        console.log(event.clientY);
-        console.log(event.clientX);
         let waveid = "wave" + (waves.length).toString();
         let death_wave = document.createElement("div");
         death_wave.id = waveid;
@@ -32,7 +24,5 @@ let handleWave = (event)=> {
     } else {
         console.log("No more");
     }
-
   }
-  
   wave_container.addEventListener("click", handleWave);

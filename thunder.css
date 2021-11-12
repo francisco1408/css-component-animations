@@ -1,0 +1,42 @@
+.component-container__thunder{
+    background-image: url("./assets/zenitsu.jpg");
+    background-size: 80vw 51.536vw;
+    background-blend-mode: darken;
+}
+.big-card__thunder-title{
+    margin: 0px 15px 0px 15px;
+    height: 19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 8px;
+    color:rgba(112, 124, 40, 0.9);
+    font-size: 150%;
+}
+
+.thunder-component{
+    height: 75%;
+    width: 240px;
+    padding: 15px;
+    overflow:hide;
+    text-align: justify;
+    text-justify: inter-word;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+    border-radius: 4px;
+    color:#f5ed7a;
+    
+    background-color: rgba(99, 166, 243, 0.15);
+    backdrop-filter: blur(3px);
+    transition: 0.08s;
+}
+.thunder-component__text, .thunder-component__title{
+    text-shadow: 1px 1px 3px #000;
+}
+.thunder-component:hover{
+    backdrop-filter: blur(8px);
+    text-shadow: 1px 1px 4px #000;
+}

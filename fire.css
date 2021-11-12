@@ -42,8 +42,9 @@
     overflow: hide;
 }
 .fire-component__title{
-    height: 19%;
-    font-size: 30px;
+    margin-bottom: 5px;
+    height: fit-content;
+    font-size: 1.4em;
     text-shadow: 0px 0px 10px #ff8c3b,
     0px 0px 40px #ff8c3b,
     0px 0px 80px #ff8c3b,
@@ -53,7 +54,7 @@
 }
 .fire-component_text{
     
-    height: 80%;
+    height: fit-content;
     font-size: 0.6em;
     overflow: hidden;
     text-shadow: 0px 0px 5px #ff8c3b;

@@ -1,38 +1,32 @@
+section:nth-child(2){
+    background-color: #c05040;
+}
+.animated_fire > .big-card{
+    animation-name: slide_fire;
+    animation-duration: 1.5s;
+    animation-delay: 0.5;
+}
+
+@keyframes slide_fire{
+    0%{
+        filter: opacity(0) saturate(50);
+        transform: scale(1.15);
+    }
+    100%{
+        filter: opacity(100%);
+        transform: scale(1);
+    }
+}
 .component-container__fire{
     background-image: url("./assets/kyojuro.jpg");
     background-size: 80vw 30.9vw;
     background-blend-mode: darken;
 }
 .big-card__fire-title{
-    margin: 0px 15px 0px 15px;
-    height: 19%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 8px;
     color:rgba(209, 44, 22, 0.9);
-    font-size: 150%;
 }
-.fire-wrap{
-    height: 95%;
-    width: 240px;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .fire-component{
-    height: 75%;
-    width: 240px;
-    padding: 15px;
-    overflow:hide;
-    text-align: justify;
-    text-justify: inter-word;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 18px;
+
     border-radius: 4px;
     color:#ffeb3b;
     
@@ -42,7 +36,7 @@
     overflow: hide;
 }
 .fire-component__title{
-    margin-bottom: 5px;
+    width: fit-content;
     height: fit-content;
     font-size: 1.4em;
     text-shadow: 0px 0px 10px #ff8c3b,
@@ -53,10 +47,7 @@
     transition:0.3s;
 }
 .fire-component_text{
-    
-    height: fit-content;
-    font-size: 0.6em;
-    overflow: hidden;
+    overflow-y: hidden;
     text-shadow: 0px 0px 5px #ff8c3b;
     transition:2s;
 }
@@ -166,3 +157,11 @@
         filter: none;
     }
 }
+.fire-wrap{
+    height: 95%;
+    width: 240px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+

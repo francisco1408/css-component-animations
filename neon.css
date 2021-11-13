@@ -1,3 +1,40 @@
+section:nth-child(4){
+    background-color: #141414;
+}
+.animated_neon > .big-card{
+    animation-name: slide_neon;
+    animation-duration: 5s;
+    animation-delay: 0s;
+}
+
+@keyframes slide_neon{
+    0%{
+        filter: opacity(0) brightness(0);
+    }
+    30%{
+        filter: opacity(0) brightness(0);
+    }
+    100%{
+        filter: opacity(1) brightness(1);
+    }
+}
+.component-container__neon{
+    background-image: url("./assets/muzan3.jpg");
+    background-size: 80vw 45vw;
+    background-blend-mode: darken;
+}
+.big-card__neon-title{
+    color: rgb(255, 74, 83);
+    letter-spacing: 20px;
+    font-size: 60px;
+}
+
+.neon-component{
+    border-radius: 4px;
+    background-color: rgba(70, 69, 69, 0.418);
+    backdrop-filter: blur(3px);
+    transition: 0.08s;
+}
 .neon-big-card{
     font-family: 'KoHo', sans-serif;
     /* font-weight: 1; */
@@ -22,46 +59,7 @@
                  0 0 17px rgba(255,22,33,0.5);
     -webkit-box-reflect: below -27% linear-gradient(transparent, #0008);
 }
-.big-card__neon-title{
-    margin: 0px;
-    /* height: 100%; */
-    /* overflow:hidden; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    text-align: center;
-    letter-spacing: 20px;
-    font-size: 60px;
-    color: rgb(255, 74, 83);
-}
 
-.component-container__neon{
-    height: 80%;
-    background-image: url("./assets/muzan3.jpg");
-    background-size: 80vw 45vw;
-    background-blend-mode: darken;
-    /* filter: saturate(5); */
-    /* border:2px solid white; */
-}
-
-.neon-component{
-    height: 75%;
-    width: 240px;
-    padding: 15px;
-    overflow:hide;
-    text-align: justify;
-    text-justify: inter-word;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 18px;
-    border-radius: 4px;
-    /* filter: brightness(10) saturate(1); */
-    
-    background-color: rgba(70, 69, 69, 0.418);
-    backdrop-filter: blur(3px);
-    transition: 0.08s;
-}
 
 .neon-component__title, .neon-component__text{
     text-shadow: 1px 1px 3px #000;

@@ -2,7 +2,6 @@ let wave_container = document.querySelector(".wave_container");
 let handleWave = (event)=> {
     let waves = document.querySelectorAll(".wavywave");
     if(waves.length < 6){
-        let cord = document.querySelector(".wave_container").getBoundingClientRect();
         let waveid = "wave" + (waves.length).toString();
         let death_wave = document.createElement("div");
         death_wave.id = waveid;

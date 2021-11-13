@@ -21,22 +21,22 @@
         <section id="water">
             
             <div class="big-card wave_container">
-                <h3 class="big-card__glassmorphism-title">watter effects<br>(click)</h3>
+                <h3 class="big-card__title big-card__glassmorphism-title">watter effects<br>(click)</h3>
                 <div class="component-container component-container__glassmorphism">
-                    <div class="component glass">
-                        <h4> What is glassmorphism?</h4>
+                    <div class="component water_component glass">
+                        <h4 class="component-title"> What is glassmorphism?</h4>
                         <div class="component_text">                        
                             Is a term used to describe UI design that emphasises light or dark objects, placed on top of colourful backgrounds. A background-blur is placed on the objects which allows the background to shine through – <b>giving it the impression of frosted glass.</b>                
                         </div>
                     </div>
-                        <div class="component glass">
-                        <h4>How does it work?</h4>
+                        <div class="component water_component glass">
+                        <h4 class="component-title">How does it work?</h4>
                         <div class="component_text">     
                             The component should be semi-transparent and have some blur, both of which are true characteristics of glass. The CSS properties for this are <b>background-color with rgba</b> (the last parameter is transparency) and <b>backdrop-filter with blur function</b>.
                         </div>
                     </div>
-                    <div class="component glass">
-                        <h4>CSS example:</h4>
+                    <div class="component water_component glass">
+                        <h4 class="component-title">CSS example:</h4>
                         <div class="component_text">     
                             .glass{ <br>
                             <div class="spaceBox">----</div>border-radius: 10px;<br>
@@ -51,62 +51,65 @@
         </section>
         <section id="fire">
             <div class="big-card">
-                <h3 class="big-card__fire-title">fire effect<br>(hover)</h3>
+                <h3 class="big-card__title big-card__fire-title">fire effect<br>(hover)</h3>
                 <div class="component-container component-container__fire">
                     
                          
-                        <div class="fire-component flame"> 
-                            <h4 class="fire-component__title">Shadows and SVG turbulence</h4>
-                            <div class="fire-component_text">     
+                        <div class="component fire-component flame"> 
+                            <h4 class="component-title fire-component__title">Shadows and SVG turbulence</h4>
+                            <div class="component_text fire-component_text">     
                                 For this efect I made three filters with the SVG and deTurbulance HTML tags, and aplied it to the title. Then I added a bunch of shadows with colors ranging from blue, yellow to red, to represent the colors of the flame. A keyframe animation is applied to the title on hover of this card, so it switches between the three filters that are slighly different.
                             </div> 
                             
 
                         </div>  
-                        <div class="fire-component flame fire-component__info">
-                            <h4 class="fire-component__title"> HTML:</h4>
-                            <div class="fire-component_text">  
+                        <div class="component fire-component flame fire-component__info">
+                            <h4 class="component-title fire-component__title"> HTML:</h4>
+                            <div class="component_text fire-component_text large_code">  
                                 <xmp>
-<svg>
-<filter id="fire1">
-    <feTurbulence 
-    id ="turbulence" 
-    baseFrequency="0.1 0.1" 
-    numOctaves="5" 
-    seed="3">
-    </feTurbulence>
-    <feDisplacementMap 
-    in="SourceGraphic" 
-    scale="6"></feDisplacementMap>
-</filter>
-<filter id="fire2">
-    <feTurbulence id ="turbulence" 
-    baseFrequency="0.09 0.12" 
-    numOctaves="5" 
-    seed="3">
-    </feTurbulence>
-    <feDisplacementMap 
-    in="SourceGraphic" 
-    scale="6"></feDisplacementMap>
-</filter>
-<filter id="fire3">
-    <feTurbulence 
-    id ="turbulence" 
-    baseFrequency="0.12 0.25" 
-    numOctaves="5" 
-    seed="3">
-    </feTurbulence>
-    <feDisplacementMap 
-    in="SourceGraphic" 
-    scale="6"></feDisplacementMap>
-</filter>
-</svg>   
-                            </xmp>
+        <svg>
+        <filter id="fire1">
+        <feTurbulence 
+        id ="turbulence" 
+        baseFrequency="0.1 0.1" 
+        numOctaves="5" 
+        seed="3">
+        </feTurbulence>
+        <feDisplacementMap 
+        in="SourceGraphic" 
+        scale="6">
+        </feDisplacementMap>
+        </filter>
+        <filter id="fire2">
+        <feTurbulence id ="turbulence" 
+        baseFrequency="0.09 0.12" 
+        numOctaves="5" 
+        seed="3">
+        </feTurbulence>
+        <feDisplacementMap 
+        in="SourceGraphic" 
+        scale="6">
+        </feDisplacementMap>
+        </filter>
+        <filter id="fire3">
+        <feTurbulence 
+        id ="turbulence" 
+        baseFrequency="0.12 0.25" 
+        numOctaves="5" 
+        seed="3">
+        </feTurbulence>
+        <feDisplacementMap 
+        in="SourceGraphic" 
+        scale="6">
+        </feDisplacementMap>
+        </filter>
+        </svg>   
+                                </xmp>
                             </div> 
                         </div>  
-                        <div class=" fire-component flame fire-component__info">
-                            <h4 class="fire-component__title"> CSS:</h4>
-                            <div class="fire-component_text">  
+                        <div class="component fire-component flame fire-component__info">
+                            <h4 class="component-title fire-component__title"> CSS:</h4>
+                            <div class="component_text fire-component_text">  
                                 
                                 .flame:hover .fire-component__title{ <br>
                                     <div class="spaceBox">----</div>border-radius: 10px;<br>
@@ -148,23 +151,23 @@
         </section>
         <section id="thunder">
             <div class="big-card">
-                <h3 class= "big-card__thunder-title">thunder effects</h3>
+                <h3 class= "big-card__title big-card__thunder-title">thunder effects</h3>
                 
                 <div class="component-container component-container__thunder">
-                    <div class="thunder-component">
-                        <h4 class="thunder-component__title">thunder</h4>
-                        <div class="thunder-component__text">
+                    <div class="component thunder-component">
+                        <h4 class="component-title thunder-component__title">thunder</h4>
+                        <div class="component_text thunder-component__text">
                             A thunder is suden, loud, and brings a torrent of light that is overwhelming and somehow blinking. I tried to cause that same impression making use of timing, brigtness and opacity to make the box strike, blink and glow. Fast erratic changes were key.
                         </div>
                     </div>
-                    <div class="thunder-component">
-                        <h4 class="thunder-component__title">Thunder.</h4>
-                        <div class="thunder-component__text">
+                    <div class="component thunder-component">
+                        <h4 class="component-title thunder-component__title">Thunder.</h4>
+                        <div class="component_text thunder-component__text">
                             A thunder is suden, loud, and brings a torrent of light that is overwhelming and somehow blinking. I tried to cause that same impression making use of timing, brigtness and opacity to make the box strike, blink and glow. Fast erratic changes were key.
                         </div>                    </div>
-                    <div class="thunder-component">
-                        <h4 class="thunder-component__title">THUNDER</h4>
-                        <div class="thunder-component__text">
+                    <div class="component thunder-component">
+                        <h4 class="component-title thunder-component__title">THUNDER</h4>
+                        <div class="component_text thunder-component__text">
                             A thunder is suden, loud, and brings a torrent of light that is overwhelming and somehow blinking. I tried to cause that same impression making use of timing, brigtness and opacity to make the box strike, blink and glow. Fast erratic changes were key.
                         </div>                    
                     </div>
@@ -174,24 +177,24 @@
         <section id="neon">
             <div class="big-card neon-big-card">
                 <div class="neon-title-container">
-                    <h3 class= "big-card__neon-title neon">neon</h3>
+                    <h3 class= " big-card__neon-title neon">neon</h3>
                 </div>
                 
                 <div class="component-container component-container__neon">
-                    <div class="neon-component">
-                        <h4 class="neon-component__title neon"> blood</h4>
+                    <div class="component neon-component">
+                        <h4 class="component-title neon-component__title neon"> blood</h4>
                         <div class="neon-component__text">
                             No man knows till he experiences it, what it is like to feel his own life-blood drawn away into the woman he loves.
                         </div>
                     </div>  
-                    <div class="neon-component">
-                        <h4 class="neon-component__title neon">blood</h4>
+                    <div class="component neon-component">
+                        <h4 class="component-title neon-component__title neon">blood</h4>
                         <div class="neon-component__text">
                             The blood is the life! The blood is the life!
                         </div>  
                     </div>
-                    <div class="neon-component">
-                        <h4 class="neon-component__title neon">blood</h4>
+                    <div class="component neon-component">
+                        <h4 class="component-title neon-component__title neon">blood</h4>
                         <div class="neon-component__text">
                             I am beginning to feel this nocturnal existence tell on me. It is destroying my nerve. I start at my own shadow, and am full of all sorts of horrible imaginings.
                         </div>  
@@ -201,7 +204,7 @@
         </section>
         <section id="sun">
             <div class="big-card">
-                <h3>GLASS MORPHISM</h3>
+                <h3 class="big-card__title">GLASS MORPHISM</h3>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt consequuntur excepturi perspiciatis doloremque officiis eius amet, fuga doloribus, error nemo, debitis eum veniam totam iure porro tempore voluptatum nam assumenda.
                 <div class="component-container">
                     <div class="component glass">
@@ -220,6 +223,7 @@
         </section>
 
     </div>
+
     <svg>
         <filter id="fire1">
             <feTurbulence id ="turbulence" baseFrequency="0.1 0.1" numOctaves="5" seed="3">

@@ -1,11 +1,10 @@
 section:nth-child(1){
     background-color: #158580;
 }
-
 .animated > .big-card{
-    
     animation-name: slide;
     animation-duration: 1.5s;
+    animation-delay: 0;
 }
 
 @keyframes slide{
@@ -22,53 +21,32 @@ section:nth-child(1){
         filter: opacity(100%);
     }
 }
-
-.component{
-    margin:2px;
-    height: 76%;
-    width: 240px;
-    padding: 15px;
-    background-color: cadetblue;
-    overflow:hide;
-    text-align: justify;
-    text-justify: inter-word;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 18px;
-}
-.component_text{
-    padding:10px;
-    text-justify:inter-cluster;
-}
-.big-card__glassmorphism-title{
-    margin: 0px 15px 0px 15px;
-    height: 19%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 8px;
-    color:rgba(35, 100, 170,0.9);
-    font-size: 150%;
-}
 .component-container__glassmorphism{
     background-image: url("./assets/giyu.jpg");
     background-size: 80vw 60vw;
+    /*  */
 }
-.glass{
+.big-card__glassmorphism-title{
+    color:rgba(35, 100, 170,0.9);
+}
+.water_component{
+    background-color: cadetblue;
     color: #112255;
     text-shadow: 0px 1px 5px #cdcdcd;
     border-radius: 10px;
     background-color: rgba(255,220,240,0.3);
     transition: 0.9s;
     backdrop-filter: blur(8px);
-    
 }
-.glass:hover{
+
+.component_text{
+    padding:10px;
+    text-justify:inter-cluster;
+}
+
+.water_component:hover{
     background-color: rgba(220,210,240,0.6);
     backdrop-filter: blur(11px);
-    
 }
 .component_text{
     transition: 1.5s;
@@ -79,3 +57,4 @@ section:nth-child(1){
     color:#202050;
     text-shadow: 0px,2px,10px,#001060;
 }
+

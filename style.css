@@ -25,15 +25,6 @@ section{
     align-items: center;
 }
 
-section:nth-child(2){
-    background-color: #c05040;
-}
-section:nth-child(3){
-    background-color: #d1c737;
-}
-section:nth-child(4){
-    background-color: #141414;
-}
 
 .big-card{
     text-align: center;
@@ -47,135 +38,17 @@ section:nth-child(4){
     justify-content: space-between;
     height: 70vh;
 }
-
-.animated_fire > .big-card{
-    animation-name: slide_fire;
-    animation-duration: 1.5s;
-    animation-delay: 0.5;
-}
-.animated_thunder > .big-card{
-    animation-name: slide_thunder;
-    animation-duration: 15s;
-    animation-delay: 0s;
-    
-}
-.animated_thunder > .big-card > .component-container__thunder{
-    animation-name: slide_zenitsu;
-    animation-duration: 15s;
-    animation-delay: 0s;
-    
-}
-.animated_neon > .big-card{
-    animation-name: slide_neon;
-    animation-duration: 5s;
-    animation-delay: 0s;
+.big-card__title{
+    height: 19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 8px;
+    font-size: 150%;
 }
 
-@keyframes slide_fire{
-    0%{
-        filter: opacity(0) saturate(50);
-        transform: scale(1.15);
-    }
-    100%{
-        filter: opacity(100%);
-        transform: scale(1);
-    }
-}
-@keyframes slide_thunder{
-    0%{
-        filter: opacity(0) brightness(5);
-    }
-    6%{
-        filter: opacity(0) brightness(5);
-        box-shadow: none;
-    }
-    7%{
-        filter: opacity(1) brightness(5);
-        box-shadow: 0px 0px 4px white,
-        0px 0px 8px rgba(255, 255, 255, 0.90),
-        0px 0px 12px rgba(255, 255, 255, 0.80),
-        0px 0px 16px rgba(255, 255, 255, 0.70),
-        0px 0px 20px rgba(255, 255, 255, 0.60),
-        0px 0px 22px rgba(255, 255, 255, 0.50),
-        0px 0px 24px rgba(255, 255, 255, 0.40);
-    }
-    8%{
-        filter: opacity(0);
-    }
-    9%{
-        filter: opacity(1);
-    }
-    10%{
-        filter: opacity(1);
-    }
-    11%{
-        filter: opacity(0);
-    }
-    12%{
-        filter: opacity(1);
-    }
-    13%{
-        filter: opacity(0);
-    }
-    15%{
-        filter: opacity(1);
-        box-shadow: 0px 0px 4px white,
-        0px 0px 8px rgba(255, 255, 255, 0.90),
-        0px 0px 12px rgba(255, 255, 255, 0.80),
-        0px 0px 16px rgba(255, 255, 255, 0.70),
-        0px 0px 20px rgba(255, 255, 255, 0.60),
-        0px 0px 22px rgba(255, 255, 255, 0.50),
-        0px 0px 24px rgba(255, 255, 255, 0.40);
-    }
-    100%{
-        filter: opacity(1) brightness(1);
-        box-shadow: 0px 4px 18px 3px black;
-    }
-}
-@keyframes slide_zenitsu{
-    0%{
-        filter: saturate(5) blur(20px);
-    }
-    6%{
-        filter: saturate(5);
-        text-shadow: 0px 0px 4px white,
-        0px 0px 8px rgba(255, 255, 255, 0.90),
-        0px 0px 12px rgba(255, 255, 255, 0.80),
-        0px 0px 16px rgba(255, 255, 255, 0.70),
-        0px 0px 18px rgba(255, 255, 255, 0.60),
-        0px 0px 20px rgba(255, 255, 255, 0.50),
-        0px 0px 21px rgba(255, 255, 255, 0.40);
-    }
-    15%{
-        
-        filter: saturate(5) blur(10px);
-    }
-    40%{
-        filter: saturate(1) blur(0px);
-        text-shadow: 0px 0px 4px white,
-        0px 0px 8px rgba(255, 255, 255, 0.90),
-        0px 0px 12px rgba(255, 255, 255, 0.80),
-        0px 0px 16px rgba(255, 255, 255, 0.70),
-        0px 0px 18px rgba(255, 255, 255, 0.60),
-        0px 0px 20px rgba(255, 255, 255, 0.50),
-        0px 0px 21px rgba(255, 255, 255, 0.40);
-    }
-    100%{
-        text-shadow: none;
-        filter: saturate(1);
-    }
-}
-@keyframes slide_neon{
-    0%{
-        filter: opacity(0) brightness(0);
-    }
-    30%{
-        filter: opacity(0) brightness(0);
-    }
-    100%{
-        filter: opacity(1) brightness(1);
-    }
-}
+
 
 .component-container{
     width: 100%;
@@ -185,28 +58,28 @@ section:nth-child(4){
     align-items: center;
 }
 .component{
-    margin:2px;
-    height: 76%;
+    height: 75%;
     width: 240px;
     padding: 15px;
-    background-color: cadetblue;
     overflow:hide;
-    text-align: justify;
-    text-justify: inter-word;
+    margin:2px;
     display:flex;
     flex-direction: column;
+    justify-content: left;
     align-items: center;
+    text-align: justify;
+    text-justify: inter-word;
     font-size: 18px;
+
+    background-color: cadetblue;
+}
+.component-title{
+    margin: 1em 0em 1em 0em;
 }
 .component_text{
-    padding:10px;
+    padding:1em;
     text-justify:inter-cluster;
 }
-
-
-
-/* Thunder */
-
-
-/* Neon */
-
+.large_code{
+    font-size: 0.5em;
+}

@@ -1,39 +1,118 @@
+section:nth-child(3){
+    background-color: #d1c737;
+}
+.animated_thunder > .big-card{
+    animation-name: slide_thunder;
+    animation-duration: 15s;
+    animation-delay: 0s;
+}
+.animated_thunder > .big-card > .component-container__thunder{
+    animation-name: slide_zenitsu;
+    animation-duration: 15s;
+    animation-delay: 0s;
+}
+@keyframes slide_thunder{
+    0%{
+        filter: opacity(0) brightness(5);
+    }
+    6%{
+        filter: opacity(0) brightness(5);
+        box-shadow: none;
+    }
+    7%{
+        filter: opacity(1) brightness(5);
+        box-shadow: 0px 0px 4px white,
+        0px 0px 8px rgba(255, 255, 255, 0.90),
+        0px 0px 12px rgba(255, 255, 255, 0.80),
+        0px 0px 16px rgba(255, 255, 255, 0.70),
+        0px 0px 20px rgba(255, 255, 255, 0.60),
+        0px 0px 22px rgba(255, 255, 255, 0.50),
+        0px 0px 24px rgba(255, 255, 255, 0.40);
+    }
+    8%{
+        filter: opacity(0);
+    }
+    9%{
+        filter: opacity(1);
+    }
+    10%{
+        filter: opacity(1);
+    }
+    11%{
+        filter: opacity(0);
+    }
+    12%{
+        filter: opacity(1);
+    }
+    13%{
+        filter: opacity(0);
+    }
+    15%{
+        filter: opacity(1);
+        box-shadow: 0px 0px 4px white,
+        0px 0px 8px rgba(255, 255, 255, 0.90),
+        0px 0px 12px rgba(255, 255, 255, 0.80),
+        0px 0px 16px rgba(255, 255, 255, 0.70),
+        0px 0px 20px rgba(255, 255, 255, 0.60),
+        0px 0px 22px rgba(255, 255, 255, 0.50),
+        0px 0px 24px rgba(255, 255, 255, 0.40);
+    }
+    100%{
+        filter: opacity(1) brightness(1);
+        box-shadow: 0px 4px 18px 3px black;
+    }
+}
+@keyframes slide_zenitsu{
+    0%{
+        filter: saturate(5) blur(20px);
+    }
+    6%{
+        filter: saturate(5);
+        text-shadow: 0px 0px 4px white,
+        0px 0px 8px rgba(255, 255, 255, 0.90),
+        0px 0px 12px rgba(255, 255, 255, 0.80),
+        0px 0px 16px rgba(255, 255, 255, 0.70),
+        0px 0px 18px rgba(255, 255, 255, 0.60),
+        0px 0px 20px rgba(255, 255, 255, 0.50),
+        0px 0px 21px rgba(255, 255, 255, 0.40);
+    }
+    15%{
+        
+        filter: saturate(5) blur(10px);
+    }
+    40%{
+        filter: saturate(1) blur(0px);
+        text-shadow: 0px 0px 4px white,
+        0px 0px 8px rgba(255, 255, 255, 0.90),
+        0px 0px 12px rgba(255, 255, 255, 0.80),
+        0px 0px 16px rgba(255, 255, 255, 0.70),
+        0px 0px 18px rgba(255, 255, 255, 0.60),
+        0px 0px 20px rgba(255, 255, 255, 0.50),
+        0px 0px 21px rgba(255, 255, 255, 0.40);
+    }
+    100%{
+        text-shadow: none;
+        filter: saturate(1);
+    }
+}
 .component-container__thunder{
     background-image: url("./assets/zenitsu.jpg");
     background-size: 80vw 51.536vw;
     background-blend-mode: darken;
 }
 .big-card__thunder-title{
-    margin: 0px 15px 0px 15px;
-    height: 19%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 8px;
     color:rgba(112, 124, 40, 0.9);
-    font-size: 150%;
 }
-
 .thunder-component{
-    height: 75%;
-    width: 240px;
-    padding: 15px;
-    overflow:hide;
-    text-align: justify;
-    text-justify: inter-word;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1em;
     border-radius: 4px;
     color:#f5ed7a;
-    
     background-color: rgba(99, 166, 243, 0.15);
     backdrop-filter: blur(3px);
     transition: 0.08s;
 }
-.thunder-component__text, .thunder-component__title{
+
+
+.thunder-component__title, .thunder-component__text{
     text-shadow: 1px 1px 3px #000;
 }
 .thunder-component:hover{
